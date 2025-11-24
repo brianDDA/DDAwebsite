@@ -60,6 +60,34 @@
       #hours p {
       margin: 4px 0;
     }
+    .faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 1em;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background: #002244;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #f1f1f1;
+  border-left: 3px solid #003366;
+  margin-top: 5px;
+  border-radius: 4px;
+}
   </style>
 </head>
 <body>
@@ -244,5 +272,25 @@
     <p> NJ License # 8806211 </p>
     <p>&copy; 2025 Don Dutton Agency, LLC</p>
   </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+
+        // Close all other answers
+        document.querySelectorAll(".faq-answer").forEach(a => {
+          if (a !== q.nextElementSibling) a.style.display = "none";
+        });
+
+        // Toggle the clicked one
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
