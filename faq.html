@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ - Don Dutton Agency</title>
+<style>
+body {font-family: Arial, sans-serif;margin:0;background:#f7f7f7;color:#333;}
+header {background:#003366;color:#fff;padding:20px;text-align:center;}
+nav {background:#002244;padding:10px;text-align:center;}
+nav a {color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
+.container {max-width:900px;margin:20px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+h2 {color:#003366;border-bottom:2px solid #003366;padding-bottom:5px;}
+footer {text-align:center;padding:20px;background:#003366;color:#fff;margin-top:40px;}
+.faq-item {margin-bottom:10px;}
+.faq-question {width:100%;text-align:left;padding:10px;font-size:1em;background:#003366;color:#fff;border:none;border-radius:4px;cursor:pointer;}
+.faq-question:hover {background:#002244;}
+.faq-answer {display:none;padding:10px;background:#f1f1f1;border-left:3px solid #003366;margin-top:5px;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Frequently Asked Questions</h1>
+</header>
+
+<nav>
+<a href="index.html#services">Services</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#hours">Hours</a>
+<a href="index.html#contact">Contact</a>
+<a href="faq.html">FAQ</a>
+</nav>
+
+<div class="container">
+<h2>Personal Insurance FAQs</h2>
+
+<div class="faq-item"><button class="faq-question">1. What factors affect my auto insurance premium?</button><div class="faq-answer">Premiums are influenced by your driving record, age, location, vehicle type, mileage, and coverage limits.</div></div>
+
+<div class="faq-item"><button class="faq-question">2. What is the difference between actual cash value and replacement cost?</button><div class="faq-answer">Actual cash value pays the depreciated value of your property; replacement cost pays to replace it with a new item of similar kind and quality.</div></div>
+
+<div class="faq-item"><button class="faq-question">3. How much homeowners insurance coverage do I really need?</button><div class="faq-answer">You should insure your home for the cost to rebuild it—not market value. This includes structure, personal belongings, and liability.</div></div>
+
+<div class="faq-item"><button class="faq-question">4. Does homeowners insurance cover floods or earthquakes?</button><div class="faq-answer">Typically, no. Flood and earthquake insurance usually require separate policies or endorsements.</div></div>
+
+<div class="faq-item"><button class="faq-question">5. Will my insurance rates increase if I file a claim?</button><div class="faq-answer">Possibly. It depends on the claim type, severity, frequency, and insurer policies.</div></div>
+
+<h2>Commercial Insurance FAQs</h2>
+
+<div class="faq-item"><button class="faq-question">6. What types of insurance does a small business need?</button><div class="faq-answer">Most businesses need general liability, commercial property, workers’ compensation, and possibly cyber, commercial auto, and professional liability.</div></div>
+
+<div class="faq-item"><button class="faq-question">7. What is a Business Owners Policy (BOP)?</button><div class="faq-answer">A BOP bundles general liability and commercial property coverage, often at a lower cost than purchasing separately.</div></div>
+
+<div class="faq-item"><button class="faq-question">8. How does workers’ compensation insurance work?</button><div class="faq-answer">It covers employee injuries or illnesses related to work and provides medical care, lost wages, and liability protection for the employer.</div></div>
+
+<div class="faq-item"><button class="faq-question">9. What is cyber liability insurance and who needs it?</button><div class="faq-answer">It protects against risks like data breaches, cyberattacks, and privacy failures. Any business that handles customer data, payments, or online operations benefits from it.</div></div>
+
+<div class="faq-item"><button class="faq-question">10. How do I determine proper coverage limits for my business?</button><div class="faq-answer">Coverage depends on business size, industry risks, assets, revenue, contracts, and legal requirements. A risk assessment with a broker can help tailor limits.</div></div>
+
+</div>
+
+<footer>
+<p>NJ License # 1578 726</p>
+<p>&copy; 2025 Don Dutton Agency, LLC</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    document.querySelectorAll('.faq-answer').forEach(a => {
+      if (a !== q.nextElementSibling) a.style.display = "none";
+    });
+    const ans = q.nextElementSibling;
+    ans.style.display = ans.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+</body>
+</html>
