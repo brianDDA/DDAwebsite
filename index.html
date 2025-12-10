@@ -31,6 +31,107 @@
       text-decoration: none;
       font-weight: bold;
     }
+    /* Dropdown container in nav */
+    nav .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 15px;
+    }
+
+    /* The button that shows the dropdown label */
+    nav .dropbtn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      font-family: inherit;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    /* The dropdown menu */
+    nav .dropdown-content {
+      display: none;              /* hide by default */
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background: #002244;
+      min-width: 200px;
+      text-align: left;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Dropdown links */
+    nav .dropdown-content a {
+      display: block;
+      margin: 0;
+      padding: 8px 15px;
+      font-weight: normal;
+    }
+
+    /* Show on hover (desktop) */
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Optional: hover styling for main links and dropdown items */
+    nav a:hover,
+    nav .dropdown-content a:hover,
+    nav .dropbtn:hover {
+      text-decoration: underline;
+    }
+    /* Dropdown container */
+nav .dropdown {
+  display: inline-block;
+  position: relative;
+  margin: 0 15px;
+}
+
+/* Hide the checkbox */
+nav .dropdown input[type="checkbox"] {
+  display: none;
+}
+
+/* Dropdown label (looks like a nav link) */
+nav .dropbtn {
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #002244;
+  min-width: 200px;
+  text-align: left;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Dropdown links */
+nav .dropdown-content a {
+  display: block;
+  padding: 8px 15px;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+nav .dropdown-content a:hover {
+  background: #003366;
+}
+
+/* ✅ Show menu when checkbox is checked */
+nav .dropdown input:checked + .dropbtn + .dropdown-content {
+  display: block;
+}
     .container {
       max-width: 900px;
       margin: 20px auto;
