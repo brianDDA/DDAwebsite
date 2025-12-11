@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips for Driving in NJ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #002244;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 15px;
+    }
+    nav .dropdown input[type="checkbox"] { display: none; }
+    nav .dropbtn {
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1em;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #002244;
+      min-width: 200px;
+      text-align: left;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    nav .dropdown-content a {
+      display: block;
+      padding: 8px 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    nav .dropdown-content a:hover { background: #003366; }
+    nav .dropdown input:checked + .dropbtn + .dropdown-content { display: block; }
+    nav a:hover, nav .dropbtn:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 5px;
+    }
+    ol {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+    .tip-note {
+      background: #f0f6ff;
+      border-left: 4px solid #4da3ff;
+      padding: 10px 12px;
+      margin: 15px 0;
+      font-size: 0.95em;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Don Dutton Agency</h1>
+	<p style="font-size:1.3em; font-style:italic;">Small Business Specialists</p>
+    <p>
+      <a href="tel:17322496346" style="color:#cce0ff;text-decoration:none;">(732) 249-6346</a> 
+      | <a href="mailto:csr@donduttonagency.com" style="color:#fff;text-decoration:none;">csr@donduttonagency.com</a>
+    </p>
+    <p>
+      <a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/" style="color:#fff; text-decoration:none;">
+        780 Livingston Avenue, North Brunswick, NJ 08902
+      </a>
+    </p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#hours">Hours</a>
+    <a href="index.html#contact">Contact</a>
+
+    <div class="dropdown">
+      <input type="checkbox" id="resources-toggle">
+      <label for="resources-toggle" class="dropbtn">Resources ▾</label>
+      <div class="dropdown-content">
+        <a href="faq.html">FAQ</a>
+        <a href="links.html">Helpful Links</a>
+        <a href="howtosave.html">How&nbsp;to&nbsp;Save</a>
+        <a href="expensive.html">It's Not Just You</a>
+        <a href="drivingnj.html">Tips for Driving in NJ</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Tips for Driving in New Jersey</h2>
+
+    <div class="tip-note">
+      <strong>Avoiding an accident is ALWAYS the best outcome.</strong>  
+      Don’t just let someone hit you. You only have one body — protect it.
+    </div>
+
+    <ol>
+      <li><strong>Patience:</strong> Slow down, leave early, and avoid rushing. The goal is to arrive safely, not to set a personal speed record.</li>
+
+      <li><strong>Communication:</strong> Other drivers cannot guess your intentions. Use your signals, headlights, horn, and brake lights so they understand what you plan to do.</li>
+
+      <li><strong>Anticipation:</strong> Drive in a predictable manner. Sudden or unusual movements force other drivers to react quickly, increasing the likelihood of a collision.</li>
+
+      <li><strong>Visibility:</strong> If you can’t see another driver, they can’t see you. Position your vehicle so cross-traffic can see you, and so you can see the brake lights ahead even when following another car.</li>
+
+      <li><strong>Large Vehicles:</strong> Trucks and buses require much more distance to stop. Never cut into their safety zone, and always give them extra space to maneuver.</li>
+    </ol>
+
+  </div>
+
+  <footer>
+    <p>NJ License #1578726</p>
+    <p>&copy; 2025 Don Dutton Agency, LLC. All rights reserved.</p>
+    <p>Insurance coverage is subject to underwriting, policy terms, conditions, and exclusions.</p>
+    <p>Information on this website is for educational purposes only and does not constitute 
+       insurance, legal, or tax advice. For specific guidance, please contact a licensed agent.</p>
+  </footer>
+
+</body>
+</html>
