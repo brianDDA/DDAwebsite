@@ -4,191 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Don Dutton Agency – Helpful Links</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #003366;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header p {
-      margin: 4px 0;
-    }
-    nav {
-      background: #002244;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-	/* Dropdown container in nav */
-    nav .dropdown {
-      display: inline-block;
-      position: relative;
-      margin: 0 15px;
-    }
-
-    /* The button that shows the dropdown label */
-    nav .dropbtn {
-      background: none;
-      border: none;
-      color: #fff;
-      font-weight: bold;
-      font-family: inherit;
-      font-size: 1em;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    /* The dropdown menu */
-    nav .dropdown-content {
-      display: none;              /* hide by default */
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background: #002244;
-      min-width: 200px;
-      text-align: left;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    /* Dropdown links */
-    nav .dropdown-content a {
-      display: block;
-      margin: 0;
-      padding: 8px 15px;
-      font-weight: normal;
-    }
-
-    /* Show on hover (desktop) */
-    nav .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Optional: hover styling for main links and dropdown items */
-    nav a:hover,
-    nav .dropdown-content a:hover,
-    nav .dropbtn:hover {
-      text-decoration: underline;
-    }
-    /* Dropdown container */
-nav .dropdown {
-  display: inline-block;
-  position: relative;
-  margin: 0 15px;
-}
-
-/* Hide the checkbox */
-nav .dropdown input[type="checkbox"] {
-  display: none;
-}
-
-/* Dropdown label (looks like a nav link) */
-nav .dropbtn {
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Dropdown menu */
-nav .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #002244;
-  min-width: 200px;
-  text-align: left;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Dropdown links */
-nav .dropdown-content a {
-  display: block;
-  padding: 8px 15px;
-  margin: 0;
-  color: #fff;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-nav .dropdown-content a:hover {
-  background: #003366;
-}
-
-/* ✅ Show menu when checkbox is checked */
-nav .dropdown input:checked + .dropbtn + .dropdown-content {
-  display: block;
-}
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 5px;
-    }
-    h3 {
-      color: #4da3ff; /* lighter blue */
-      margin-top: 30px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .link-item {
-      margin-bottom: 25px;
-    }
-    .link-item h4 a {
-      color: #003366;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .link-item h4 a:hover {
-      text-decoration: underline;
-    }
-	.tip-note {
-  		background: #f0f6ff;
-  		border-left: 4px solid #4da3ff;
-  		padding: 10px 12px;
-  		margin: 15px 0;
-  		font-size: 0.95em;
-	}
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #003366;
-      color: #fff;
-      margin-top: 40px;
-    }
-  </style>
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="site-page page-links">
   <header>
     <h1>Don Dutton Agency</h1>
-    <p style="font-size:1.3em; font-style:italic;">Small Business Specialists</p>
-    <p><a href="tel:17322496346" style="color:#cce0ff;text-decoration:none;">(732) 249-6346</a> 
-       | <a href="mailto:csr@donduttonagency.com" style="color:#fff;text-decoration:none;">csr@donduttonagency.com</a>
+    <p class="site-tagline">Small Business Specialists</p>
+    <p><a href="tel:17322496346" class="header-phone">(732) 249-6346</a> 
+       | <a href="mailto:csr@donduttonagency.com" class="header-link">csr@donduttonagency.com</a>
     </p>
     <p>
-      <a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/" style="color:#fff; text-decoration:none;">
+      <a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/" class="header-link">
         780 Livingston Avenue, North Brunswick, NJ 08902
       </a>
     </p>
@@ -217,7 +45,7 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
     <h2>Helpful Links</h2>
 
     <!-- LEGISLATION -->
-    <h3>Legislation (Taxi Drivers)</h3>
+    <h3 class="section-heading">Legislation (Taxi Drivers)</h3>
 
     <div class="link-item">
       <h4><a href="https://www.njleg.state.nj.us/bill-search/2026/A3396" target="_blank">
@@ -230,7 +58,7 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
     </div>
 	
 	    <!-- Insurance Requirements -->
-    <h3>Commercial Insurance</h3>
+    <h3 class="section-heading">Commercial Insurance</h3>
 
     <div class="link-item">
       <h4><a href="https://www.nj.gov/labor/workerscompensation/employer-requirements/" target="_blank">
@@ -266,9 +94,9 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
 	  <p>
         Registered contractor businesses must maintain a bond respective to the amount of contracts performed. NJSA 56:8-142(e)(f)
 	  </p>
-	  <p style="margin:0;">Contracts under $10,000 or annual < $150,000 = $10,000 bond.</p>
-	  <p style="margin:0;">Contracts between $10,000-$120,000 or annual between $150,000 and $750,000 = $25,000 bond.</p>
-	  <p style="margin:0;">Contracts over $120,000 or annual ≥ $750,000 = $50,000 bond.</p>
+	  <p class="bond-amount">Contracts under $10,000 or annual < $150,000 = $10,000 bond.</p>
+	  <p class="bond-amount">Contracts between $10,000-$120,000 or annual between $150,000 and $750,000 = $25,000 bond.</p>
+	  <p class="bond-amount">Contracts over $120,000 or annual ≥ $750,000 = $50,000 bond.</p>
 	  <p>The compliance bond doesn't cover bad work or lawsuits, it guarantees the State can collect penalties if you violate home-improvement laws.</p>
     </div>
 	    
@@ -291,7 +119,7 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
     </div>
     
     <!-- AUTO INSURANCE SECTION -->
-    <h3>Auto Insurance</h3>
+    <h3 class="section-heading">Auto Insurance</h3>
 
     <div class="link-item">
       <h4><a href="https://www.nj.gov/dobi/division_consumers/insurance/auto.htm" target="_blank">
@@ -305,7 +133,6 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
         </a>
       that earn you a discount on your insurance!</p>
 </div>
-
 
     <div class="link-item">
       <h4><a href="https://www.nj.gov/dobi/division_consumers/pdf/everythingauto2023.pdf" target="_blank">
@@ -329,7 +156,7 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
     </div>	  
 
     <!-- HOMEOWNERS -->
-    <h3>Homeowners Insurance</h3>
+    <h3 class="section-heading">Homeowners Insurance</h3>
 
     <div class="link-item">
       <h4><a href="https://www.nj.gov/dobi/division_consumers/insurance/homeowner.htm" target="_blank">
@@ -342,37 +169,15 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
 
   <footer>
     <p>NJ License #1578726</p>
-    <p>&copy; 2025 Don Dutton Agency, LLC. All rights reserved.</p>
+    <p>&copy; 2026 Don Dutton Agency, LLC. All rights reserved.</p>
     <p>Insurance coverage is subject to underwriting, policy terms, conditions, and exclusions.</p>
     <p>Information on this website is for educational purposes only and does not constitute 
     insurance, legal, or tax advice. For specific guidance, please contact a licensed agent.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

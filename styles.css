@@ -1,7 +1,8 @@
 /*
- * Don Dutton Agency shared stylesheet
- * Consolidated from index.html, faq.html, links.html, howtosave.html,
- * expensive.html, driving.html, and privacy.html.
+ * Don Dutton Agency — shared stylesheet
+ * Used by index, FAQ, Helpful Links, How to Save, It's Not Just You,
+ * Driving in NJ, Privacy Policy, and Terms & Conditions.
+ * All pages share the same header, navigation, content, and footer styles.
  */
 
 :root {
@@ -15,223 +16,215 @@
   --dda-note-bg: #f0f6ff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+/* Shared layout for all eight agency pages. */
+body.site-page {
+  font-family: Arial, sans-serif;
   margin: 0;
   background: var(--dda-page-bg);
   color: var(--dda-text);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header */
-header {
-  padding: 20px;
+.site-page header {
   background: var(--dda-navy);
   color: var(--dda-white);
+  padding: 20px;
   text-align: center;
 }
 
-header p {
+.site-page header p {
   margin: 4px 0;
 }
 
-header > p:first-of-type,
 .site-tagline {
   font-size: 1.3em;
   font-style: italic;
 }
 
-header a {
-  color: var(--dda-white);
+.header-phone {
+  color: #cce0ff;
   text-decoration: none;
 }
 
-header a[href^="tel:"] {
-  color: #cce0ff;
+.header-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-header a:hover,
-header a:focus-visible {
-  text-decoration: underline;
-}
-
-/* Primary navigation and Resources dropdown */
-nav {
-  padding: 10px;
+/* Primary navigation and the Resources dropdown. */
+.site-page nav {
   background: var(--dda-navy-dark);
+  padding: 10px;
   text-align: center;
 }
 
-nav a {
-  margin: 0 15px;
+.site-page nav a {
   color: var(--dda-white);
-  font-weight: bold;
+  margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.page-expensive nav a {
   white-space: nowrap;
 }
 
-nav .dropdown {
-  position: relative;
+.site-page nav .dropdown {
   display: inline-block;
+  position: relative;
   margin: 0 15px;
 }
 
-nav .dropdown input[type="checkbox"] {
+.site-page nav .dropdown input[type="checkbox"] {
   display: none;
 }
 
-nav .dropbtn {
-  padding: 0;
-  border: 0;
+.site-page nav .dropbtn {
   background: none;
+  border: none;
   color: var(--dda-white);
-  cursor: pointer;
-  font: inherit;
   font-weight: bold;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0;
 }
 
-nav .dropdown-content {
-  position: absolute;
-  z-index: 1000;
-  top: 100%;
-  left: 0;
+.site-page nav .dropdown-content {
   display: none;
-  min-width: 200px;
+  position: absolute;
+  left: 0;
+  top: 100%;
   background: var(--dda-navy-dark);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
   text-align: left;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-nav .dropdown-content a {
+.site-page nav .dropdown-content a {
   display: block;
   margin: 0;
   padding: 8px 15px;
   color: var(--dda-white);
-  font-weight: normal;
   text-decoration: none;
+  font-weight: normal;
 }
 
-nav .dropdown:hover .dropdown-content,
-nav .dropdown:focus-within .dropdown-content,
-nav .dropdown input:checked + .dropbtn + .dropdown-content {
+/* Driving originally used wider dropdown-link margins and click-to-open. */
+.page-driving nav .dropdown-content a {
+  margin: 0 15px;
+}
+
+.site-page:not(.page-driving) nav .dropdown:hover .dropdown-content,
+.site-page nav .dropdown input:checked + .dropbtn + .dropdown-content {
   display: block;
 }
 
-nav a:hover,
-nav a:focus-visible,
-nav .dropbtn:hover,
-nav .dropbtn:focus-visible {
+.site-page nav a:hover,
+.site-page nav .dropbtn:hover {
   text-decoration: underline;
 }
 
-nav .dropdown-content a:hover,
-nav .dropdown-content a:focus-visible {
+.site-page nav .dropdown-content a:hover {
   background: var(--dda-navy);
 }
 
-/* Main content */
-.container {
+/* Content containers retain the original content-box width and padding. */
+.site-page .container {
   max-width: 900px;
   margin: 20px auto;
+  background: var(--dda-white);
   padding: 20px;
   border-radius: 8px;
-  background: var(--dda-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  padding-bottom: 5px;
-  border-bottom: 2px solid var(--dda-navy);
+.site-page h2 {
   color: var(--dda-navy);
-}
-
-h3 {
-  margin-top: 30px;
+  border-bottom: 2px solid var(--dda-navy);
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--dda-border);
-  color: var(--dda-blue);
 }
 
-h4 {
+.section-heading {
+  color: var(--dda-blue);
+  margin-top: 30px;
+  border-bottom: 1px solid var(--dda-border);
+  padding-bottom: 5px;
+}
+
+.subsection-heading {
+  color: var(--dda-navy);
   margin-top: 20px;
   margin-bottom: 8px;
-  color: var(--dda-navy);
 }
 
-ul {
+.page-howtosave ul,
+.page-expensive ul {
   margin-top: 0;
   padding-left: 20px;
 }
 
-ol {
-  margin-top: 0;
+.page-driving ol {
   padding-left: 20px;
+  margin-top: 0;
 }
 
-ol li {
+.page-driving ol li {
   margin-bottom: 15px;
 }
 
-img {
-  float: right;
+.page-home img,
+.page-faq img,
+.page-driving img {
   max-width: 200px;
-  margin: 0 0 10px 20px;
   border-radius: 8px;
+  float: right;
+  margin: 0 0 10px 20px;
 }
 
-#hours p {
+.site-page #hours p {
   margin: 4px 0;
 }
 
-/* Notes and informational callouts */
-.tip-note {
-  margin: 15px 0;
-  padding: 10px 12px;
-  border-left: 4px solid var(--dda-blue);
+/* Notes and resource links. */
+.site-page .tip-note {
   background: var(--dda-note-bg);
+  border-left: 4px solid var(--dda-blue);
+  padding: 10px 12px;
+  margin: 15px 0;
   font-size: 0.95em;
 }
 
-.tip-note ul,
 .compact-list {
   margin-top: 8px;
   margin-bottom: 0;
 }
 
-.resource-list li {
+.page-howtosave .resource-list li {
   margin-bottom: 6px;
 }
 
-a.external-link,
-a.resource-link {
+.page-howtosave a.external-link,
+.page-expensive a.external-link {
   color: var(--dda-navy);
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
-a.external-link:hover,
-a.external-link:focus-visible,
-a.resource-link:hover,
-a.resource-link:focus-visible {
+.page-howtosave a.external-link:hover,
+.page-expensive a.external-link:hover {
   text-decoration: underline;
 }
 
-/* Homepage */
+/* Homepage banners, quote/bond buttons, and carrier logos. */
 .holiday-banner {
-  padding: 12px 16px;
-  border-bottom: 2px solid #f0c36d;
   background: #ffefd6;
   color: #663c00;
+  border-bottom: 2px solid #f0c36d;
+  text-align: center;
+  padding: 12px 16px;
   font-size: 0.95em;
   font-weight: bold;
-  text-align: center;
 }
 
 .holiday-banner span {
@@ -239,19 +232,19 @@ a.resource-link:focus-visible {
 }
 
 .hiring-banner {
-  padding: 8px 14px;
+  background: #f5f7fa;
   border: 1px solid #d6dce5;
   border-radius: 6px;
-  background: #f5f7fa;
+  padding: 8px 14px;
+  text-align: center;
   font-family: Arial, sans-serif;
   line-height: 1.2;
-  text-align: center;
 }
 
 .hiring-banner strong {
   display: block;
-  margin-bottom: 1px;
   font-size: 17px;
+  margin-bottom: 1px;
 }
 
 .hiring-banner span {
@@ -264,73 +257,66 @@ a.resource-link:focus-visible {
   text-decoration: none;
 }
 
-.hiring-banner a:hover,
-.hiring-banner a:focus-visible {
+.hiring-banner a:hover {
   text-decoration: underline;
 }
 
-/* These selectors preserve the homepage's existing inline button layout. */
-#services > div:first-child,
 .action-buttons {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
   gap: 10px;
+  flex-wrap: nowrap;
   margin: 15px 0;
 }
 
-#services > div:first-child > a,
 .action-button {
+  font-weight: bold;
+  font-size: 1.1em;
   padding: 10px 20px;
-  border-radius: 6px;
   background: var(--dda-navy);
   color: var(--dda-white);
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
+  border-radius: 6px;
   text-decoration: none;
+  text-align: center;
 }
 
-#services > img,
-.partner-logo {
-  width: auto;
+.page-home img.partner-logo {
   max-width: 180px;
   height: auto;
   margin: 0 0 10px 20px;
 }
 
-/* FAQ accordion */
+/* FAQ accordion; the existing page script still handles opening answers. */
 .faq-item {
   margin-bottom: 10px;
 }
 
 .faq-question {
   width: 100%;
+  text-align: left;
   padding: 10px;
-  border: 0;
-  border-radius: 4px;
+  font-size: 1em;
   background: var(--dda-navy);
   color: var(--dda-white);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1em;
-  text-align: left;
 }
 
-.faq-question:hover,
-.faq-question:focus-visible {
+.faq-question:hover {
   background: var(--dda-navy-dark);
 }
 
 .faq-answer {
   display: none;
-  margin-top: 5px;
   padding: 10px;
-  border-left: 3px solid var(--dda-navy);
-  border-radius: 4px;
   background: #f1f1f1;
+  border-left: 3px solid var(--dda-navy);
+  margin-top: 5px;
+  border-radius: 4px;
 }
 
-/* Helpful Links page */
+/* Helpful Links. */
 .link-item {
   margin-bottom: 25px;
 }
@@ -342,176 +328,50 @@ a.resource-link:focus-visible {
   text-decoration: none;
 }
 
-.link-item h4 a:hover,
-.link-item h4 a:focus-visible {
+.link-item h4 a:hover {
   text-decoration: underline;
 }
 
-.no-margin,
 .bond-amount {
   margin: 0;
 }
 
-/* It's Not Just You page */
-img.chart {
-  float: none;
+/* Charts on It's Not Just You. */
+.page-expensive img.chart {
   width: 100%;
   max-width: 100%;
-  margin: 15px 0;
   border: 1px solid var(--dda-border);
   border-radius: 6px;
+  margin: 15px 0;
 }
 
-/* Footer */
-footer {
-  margin-top: 40px;
+/* Footer links appear at the bottom of every page. */
+.site-page footer {
+  text-align: center;
   padding: 20px;
   background: var(--dda-navy);
   color: var(--dda-white);
-  text-align: center;
+  margin-top: 40px;
 }
 
-footer a {
-  color: #cce0ff;
-}
-
-footer a[href="#top"],
 .back-to-top {
   color: #cce0ff;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
-footer a:hover,
-footer a:focus-visible {
-  text-decoration: underline;
-}
-
-/*
- * Privacy and Terms pages currently use a different visual treatment.
- * The :has() selector preserves that treatment without requiring an immediate
- * HTML change. Adding class="legal-page" to <body> is the preferred long-term
- * option and is supported by the same rules below.
- */
-:is(body.legal-page, body:has(> main)) {
-  background: var(--dda-white);
-  color: #222;
-  line-height: 1.6;
-}
-
-:is(body.legal-page, body:has(> main)) > header {
-  padding: 24px 20px;
-  border-bottom: 1px solid #ddd;
-  background: var(--dda-white);
-  color: #222;
-}
-
-:is(body.legal-page, body:has(> main)) > header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-:is(body.legal-page, body:has(> main)) .tagline {
-  margin: 4px 0 10px;
-  color: #555;
-  font-size: 1em;
-  font-style: normal;
-}
-
-:is(body.legal-page, body:has(> main)) .contact-line {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-:is(body.legal-page, body:has(> main)) > header a,
-:is(body.legal-page, body:has(> main)) > header a[href^="tel:"] {
-  color: #0645ad;
-}
-
-:is(body.legal-page, body:has(> main)) > header nav {
-  margin-top: 16px;
-  padding: 0;
-  background: transparent;
-}
-
-:is(body.legal-page, body:has(> main)) > header nav a {
-  margin: 0 10px;
-  color: #0645ad;
-  font-weight: normal;
-}
-
-:is(body.legal-page, body:has(> main)) > main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 24px;
-}
-
-:is(body.legal-page, body:has(> main)) > main h2 {
-  margin-top: 36px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ddd;
-  color: #222;
-}
-
-:is(body.legal-page, body:has(> main)) > main h3 {
-  margin-top: 26px;
-  padding-bottom: 0;
-  border-bottom: 0;
-  color: #222;
-}
-
-.effective-date {
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.important {
-  margin: 24px 0;
-  padding: 16px 18px;
-  border-left: 4px solid #555;
-  background: #f6f6f6;
-}
-
-:is(body.legal-page, body:has(> main)) a {
-  color: #0645ad;
-}
-
-:is(body.legal-page, body:has(> main)) > footer {
-  margin-top: 60px;
-  padding: 28px 20px;
-  border-top: 1px solid #ddd;
-  background: var(--dda-white);
-  color: #555;
-  font-size: 0.9rem;
-}
-
-:is(body.legal-page, body:has(> main)) > footer a {
+.footer-links a {
+  display: inline-block;
   margin: 0 8px;
-  color: #0645ad;
+}
+
+.site-page .footer-links a {
+  color: #cce0ff;
 }
 
 @media (max-width: 600px) {
   .holiday-banner {
-    padding: 10px 12px;
     font-size: 0.9em;
-  }
-
-  #services > div:first-child,
-  .action-buttons {
-    flex-wrap: wrap;
-  }
-
-  :is(body.legal-page, body:has(> main)) > header h1 {
-    font-size: 1.6rem;
-  }
-
-  :is(body.legal-page, body:has(> main)) > main {
-    margin-top: 25px;
-    padding: 0 18px;
-  }
-
-  :is(body.legal-page, body:has(> main)) > header nav a {
-    display: inline-block;
-    margin: 5px 8px;
+    padding: 10px 12px;
   }
 }

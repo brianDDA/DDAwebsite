@@ -4,199 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Don Dutton Agency FAQs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #003366;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header p {
-      margin: 4px 0;
-    }
-    nav {
-      background: #002244;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    /* Dropdown container in nav */
-    nav .dropdown {
-      display: inline-block;
-      position: relative;
-      margin: 0 15px;
-    }
-
-    /* The button that shows the dropdown label */
-    nav .dropbtn {
-      background: none;
-      border: none;
-      color: #fff;
-      font-weight: bold;
-      font-family: inherit;
-      font-size: 1em;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    /* The dropdown menu */
-    nav .dropdown-content {
-      display: none;              /* hide by default */
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background: #002244;
-      min-width: 200px;
-      text-align: left;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    /* Dropdown links */
-    nav .dropdown-content a {
-      display: block;
-      margin: 0;
-      padding: 8px 15px;
-      font-weight: normal;
-    }
-
-    /* Show on hover (desktop) */
-    nav .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Optional: hover styling for main links and dropdown items */
-    nav a:hover,
-    nav .dropdown-content a:hover,
-    nav .dropbtn:hover {
-      text-decoration: underline;
-    }
-    /* Dropdown container */
-nav .dropdown {
-  display: inline-block;
-  position: relative;
-  margin: 0 15px;
-}
-
-/* Hide the checkbox */
-nav .dropdown input[type="checkbox"] {
-  display: none;
-}
-
-/* Dropdown label (looks like a nav link) */
-nav .dropbtn {
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Dropdown menu */
-nav .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #002244;
-  min-width: 200px;
-  text-align: left;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Dropdown links */
-nav .dropdown-content a {
-  display: block;
-  padding: 8px 15px;
-  margin: 0;
-  color: #fff;
-  text-decoration: none;
-  font-weight: normal;
-}
-
-nav .dropdown-content a:hover {
-  background: #003366;
-}
-
-/* ✅ Show menu when checkbox is checked */
-nav .dropdown input:checked + .dropbtn + .dropdown-content {
-  display: block;
-}
-    .container {
-      max-width: 900px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #003366;
-      color: #fff;
-      margin-top: 40px;
-    }
-    img {
-      max-width: 200px;
-      border-radius: 8px;
-      float: right;
-      margin: 0 0 10px 20px;
-    }
-      #hours p {
-      margin: 4px 0;
-    }
-    .faq-item {
-  margin-bottom: 10px;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 10px;
-  font-size: 1em;
-  background: #003366;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.faq-question:hover {
-  background: #002244;
-}
-
-.faq-answer {
-  display: none;
-  padding: 10px;
-  background: #f1f1f1;
-  border-left: 3px solid #003366;
-  margin-top: 5px;
-  border-radius: 4px;
-}
-  </style>
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="site-page page-faq">
   <header>
     <h1>Don Dutton Agency</h1>
-    <p style="font-size:1.3em; font-style:italic;">Small Business Specialists</p>
-    <p><a href="tel:17322496346" style="color:#cce0ff;text-decoration:none;">(732) 249-6346</a> | <a href="mailto:csr@donduttonagency.com" style="color:#fff;text-decoration:none;">csr@donduttonagency.com</a></p>
-    <p><a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/@40.4731682,-74.467595,17z/data=!3m2!4b1!5s0x89c3c69ad9ce2a19:0xbc86584993b25878!4m6!3m5!1s0x89c3c69ad77f5283:0xec48ddc183a43cbb!8m2!3d40.4731682!4d-74.4650201!16s%2Fg%2F11b7_0100z?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" style="color:#fff; text-decoration:none;">780 Livingston Avenue, North Brunswick, NJ 08902</a></p>
+    <p class="site-tagline">Small Business Specialists</p>
+    <p><a href="tel:17322496346" class="header-phone">(732) 249-6346</a> | <a href="mailto:csr@donduttonagency.com" class="header-link">csr@donduttonagency.com</a></p>
+    <p><a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/@40.4731682,-74.467595,17z/data=!3m2!4b1!5s0x89c3c69ad9ce2a19:0xbc86584993b25878!4m6!3m5!1s0x89c3c69ad77f5283:0xec48ddc183a43cbb!8m2!3d40.4731682!4d-74.4650201!16s%2Fg%2F11b7_0100z?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" class="header-link">780 Livingston Avenue, North Brunswick, NJ 08902</a></p>
   </header>
 
 <nav>
@@ -249,11 +65,16 @@ nav .dropdown input:checked + .dropbtn + .dropdown-content {
 
 <footer>
 <p>NJ License #1578<span></span>726</p>
-<p>&copy; 2025 Don Dutton Agency, LLC. All rights reserved.</p>
+<p>&copy; 2026 Don Dutton Agency, LLC. All rights reserved.</p>
     <p>Insurance coverage is subject to underwriting, policy terms, conditions, and exclusions.</p>
     <p>Information on this website is for educational purposes only and does not constitute 
     insurance, legal, or tax advice. For specific guidance, please contact a licensed agent.</p>
-</footer>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+  </footer>
 
 <script>
 document.querySelectorAll('.faq-question').forEach(q => {
