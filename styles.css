@@ -1,7 +1,7 @@
 /*
  * Don Dutton Agency — shared stylesheet
  * Used by index, FAQ, Helpful Links, How to Save, It's Not Just You,
- * Driving in NJ, Privacy Policy, and Terms & Conditions.
+ * Driving in NJ, News, Privacy Policy, and Terms & Conditions.
  * All pages share the same header, navigation, content, and footer styles.
  */
 
@@ -330,6 +330,56 @@ body.site-page {
 
 .link-item h4 a:hover {
   text-decoration: underline;
+}
+
+/* News-page worker-classification summary and ABC-test disclosures. */
+.classification-heading {
+  margin: 22px 0 8px;
+  font-size: 1.05em;
+}
+
+.classification-heading a {
+  color: var(--dda-navy);
+}
+
+.abc-test {
+  margin: 15px 0;
+}
+
+.abc-test details {
+  margin: 10px 0;
+  background: var(--dda-page-bg);
+  border: 1px solid var(--dda-border);
+  border-radius: 6px;
+}
+
+.abc-test summary {
+  padding: 10px 12px;
+  color: var(--dda-navy);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.abc-test summary:hover,
+.abc-test summary:focus-visible {
+  background: var(--dda-note-bg);
+}
+
+.abc-test details[open] summary {
+  background: var(--dda-note-bg);
+  border-bottom: 1px solid var(--dda-border);
+}
+
+.abc-content {
+  padding: 10px 16px 12px;
+}
+
+.abc-content > :first-child {
+  margin-top: 0;
+}
+
+.abc-content > :last-child {
+  margin-bottom: 0;
 }
 
 .bond-amount {
