@@ -36,6 +36,48 @@
       .page-home .header-vehicle-layout { display: block; }
       .page-home .header-vehicle-stack { display: none; }
     }
+
+    /* Homepage services: commercial and personal coverage */
+    .page-home #services .services-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 16px 0 24px;
+      text-align: left;
+      align-items: stretch;
+    }
+    .page-home #services .service-card {
+      box-sizing: border-box;
+      min-width: 0;
+      padding: 20px 24px;
+      border-radius: 14px;
+      color: #172a35;
+    }
+    .page-home #services .service-card--commercial {
+      background: #e0f0e3;
+      border: 1px solid #87b995;
+    }
+    .page-home #services .service-card--personal {
+      background: #e0edfa;
+      border: 1px solid #86acd2;
+    }
+    .page-home #services .service-card h3 {
+      margin: 0 0 10px;
+      text-align: center;
+      font-size: 1.3rem;
+      border: 0;
+      background: none;
+      padding: 0;
+    }
+    .page-home #services .service-card--commercial h3 { color: #205c35; }
+    .page-home #services .service-card--personal h3 { color: #174c81; }
+    .page-home #services .service-card p { margin: 0 0 10px; }
+    .page-home #services .service-card ul { padding-left: 1.4em; }
+    .page-home #services .service-card a { color: #174c81; text-decoration: underline; }
+    @media (max-width: 640px) {
+      .page-home #services .services-columns { grid-template-columns: 1fr; }
+      .page-home #services .service-card { padding: 18px; }
+    }
   </style>
 </head>
 <body class="site-page page-home" id="top">
@@ -148,41 +190,49 @@
 />
 
       <h2>Services</h2>
-      <p>We specialize in <i>commercial</i> insurance and bonds for public transportation, including:</p>
-      <ul>
-        <li>Business Owners</li>
-        <li>General Liability</li>
-        <li>Commercial Auto
+      <div class="services-columns">
+        <div class="service-card service-card--commercial">
+          <h3>Commercial</h3>
+          <p>We specialize in <i>commercial</i> insurance and bonds for public transportation, including:</p>
           <ul>
-            <li>Contractor</li>
-            <li>Taxi</li>
-            <li>School Bus Contractor</li>
+            <li>Business Owners</li>
+            <li>General Liability</li>
+            <li>Commercial Auto
+              <ul>
+                <li>Contractor</li>
+                <li>Taxi</li>
+                <li>School Bus Contractor</li>
+              </ul>
+            </li>
+            <li>Workers' Compensation</li>
+            <li>Bonds
+              <ul>
+                <li>Bid</li>
+                <li>Performance</li>
+                <li>License &amp; Permit</li>
+                <li>Contract</li>
+                <li>Business Service (Janitorial)</li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li>Workers' Compensation</li>
-        <li>Bonds
+        </div>
+        <div class="service-card service-card--personal">
+          <h3>Personal</h3>
+          <p>Our agency is happy to meet your <i>personal</i> insurance needs for:</p>
           <ul>
-            <li>Bid</li>
-            <li>Performance</li>
-            <li>License &amp; Permit</li>
-            <li>Contract</li>
-            <li>Business Service (Janitorial)</li>
+            <li>Personal Auto</li>
+            <li>Homeowners</li>
+            <li>Condo & Townhouse</li>
+            <li>Renters</li>
+            <li><a href="https://www.progressive.com/lp-agent/life/?agentcd=35339">Life</a></li>
+            <li><a href="https://www.progressive.com/lp-agent/pet/?agentcd=35339">Pet Health</a></li>
+            <li>Motorcycle</li>        
+            <li>RV</li>
+            <li>ATV</li>
+            <li>Boat</li>
           </ul>
-        </li>
-      </ul>
-      <p>Our agency is happy to meet your <i>personal</i> insurance needs for:</p>
-      <ul>
-        <li>Personal Auto</li>
-        <li>Homeowners</li>
-        <li>Condo & Townhouse</li>
-        <li>Renters</li>
-        <a href="https://www.progressive.com/lp-agent/life/?agentcd=35339"><li>Life</a></li>
-        <a href="https://www.progressive.com/lp-agent/pet/?agentcd=35339"><li>Pet Health</a></li>
-        <li>Motorcycle</li>        
-        <li>RV</li>
-        <li>ATV</li>
-        <li>Boat</li>
-      </ul>
+        </div>
+      </div>
 
       <div class="tip-note">
   <strong>What to Bring to the Office for a Quote</strong>
