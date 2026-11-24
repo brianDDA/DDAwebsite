@@ -6,6 +6,37 @@
   <title>Don Dutton Agency</title>
   
   <link rel="stylesheet" href="styles.css?v=20261122-original-logos">
+  <style>
+    .page-home .vehicle-header { position: relative; }
+    .page-home .header-vehicle-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 120px) minmax(0, auto) minmax(0, 120px);
+      align-items: center;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 64px);
+      margin: 0 auto;
+    }
+    .page-home .header-vehicle-stack {
+      display: grid;
+      grid-template-rows: repeat(2, 58px);
+      gap: 8px;
+      align-items: center;
+      justify-items: center;
+    }
+    .page-home .header-vehicle-stack img {
+      display: block;
+      width: 120px;
+      max-width: 100%;
+      height: 58px;
+      object-fit: contain;
+      margin: 0;
+    }
+    .page-home .header-company-info { min-width: 0; text-align: center; }
+    @media (max-width: 760px) {
+      .page-home .header-vehicle-layout { display: block; }
+      .page-home .header-vehicle-stack { display: none; }
+    }
+  </style>
 </head>
 <body class="site-page page-home" id="top">
 
@@ -23,11 +54,23 @@
   <span><a href="careers.html">View Job Details and Apply</a></span>
 </div>
 
-  <header>
+  <header class="vehicle-header">
+    <div class="header-vehicle-layout">
+      <div class="header-vehicle-stack" aria-hidden="true">
+        <img src="images/header-minivan.webp" alt="" decoding="async">
+        <img src="images/header-school-bus.webp" alt="" decoding="async">
+      </div>
+      <div class="header-company-info">
     <h1>Don Dutton Agency</h1>
     <p class="site-tagline">Small Business Specialists</p>
     <p><a href="tel:17322496346" class="header-phone">(732) 249-6346</a> | <a href="mailto:csr@donduttonagency.com" class="header-link">csr@donduttonagency.com</a></p>
     <p><a href="https://www.google.com/maps/place/Don+Dutton+Agency+LLC/@40.4731682,-74.467595,17z/data=!3m2!4b1!5s0x89c3c69ad9ce2a19:0xbc86584993b25878!4m6!3m5!1s0x89c3c69ad77f5283:0xec48ddc183a43cbb!8m2!3d40.4731682!4d-74.4650201!16s%2Fg%2F11b7_0100z?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" class="header-link">780 Livingston Avenue, North Brunswick, NJ 08902</a></p>
+      </div>
+      <div class="header-vehicle-stack header-vehicle-stack--right" aria-hidden="true">
+        <img src="images/header-taxi.webp" alt="" decoding="async">
+        <img src="images/header-pickup-truck.webp" alt="" decoding="async">
+      </div>
+    </div>
   </header>
 
   <nav>
