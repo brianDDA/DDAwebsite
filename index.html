@@ -78,6 +78,36 @@
       .page-home #services .services-columns { grid-template-columns: 1fr; }
       .page-home #services .service-card { padding: 18px; }
     }
+    /* Carrier logos flank the action buttons without floating into Services. */
+    .page-home #services .action-partners {
+      display: grid;
+      grid-template-columns: minmax(0, 180px) minmax(0, 1fr) minmax(0, 180px);
+      align-items: center;
+      gap: 24px;
+      margin: 15px 0;
+    }
+    .page-home #services .action-partners img.partner-logo {
+      float: none;
+      display: block;
+      width: auto;
+      max-width: min(100%, 180px);
+      height: auto;
+      margin: 0 auto;
+    }
+    .page-home #services .action-partners .action-buttons {
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 760px) {
+      .page-home #services .action-partners {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 24px;
+      }
+      .page-home #services .action-partners .action-buttons {
+        grid-column: 1 / -1;
+        grid-row: 1;
+      }
+    }
   </style>
 </head>
 <body class="site-page page-home" id="top">
@@ -165,7 +195,9 @@
 
   <div class="container">
     <section id="services">
-<div class="action-buttons">
+<div class="action-partners">
+  <img src="PRG19.png" alt="Proud to be a Progressive agent for 19 years" class="partner-logo">
+  <div class="action-buttons">
 
     <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=_h6UfSzjgkmrLVEBFwWGE1KIBMkr7qxFq_HVj3XOCAxUMk5TRzlCVTU4TlVTQVo4Q09TUVlKQUE2Qy4u" class="action-button">
         Request a Quote
@@ -179,16 +211,9 @@
         Google Review
     </a>
 
+  </div>
+  <img src="GEICO-CA.jpg" alt="GEICO Commercial Auto Insurance" class="partner-logo">
 </div>
-  <img 
-  src="PRG19.png" 
-  alt="Proud to be a Progressive agent for 19 years" class="partner-logo"
-/>
-<img 
-  src="GEICO-CA.jpg"
-  alt="GEICO Commercial Auto Insurance" class="partner-logo"
-/>
-
       <h2>Services</h2>
       <div class="services-columns">
         <div class="service-card service-card--commercial">
@@ -233,6 +258,8 @@
           </ul>
         </div>
       </div>
+
+
 
       <div class="tip-note">
   <strong>What to Bring to the Office for a Quote</strong>
